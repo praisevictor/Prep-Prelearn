@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartPrepLearn - Login</title>
+  <link rel="stylesheet" href="login.css"/>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LEFT SIDE (branding) -->
+    <div class="branding">
+      <div class="logo-box">
+        <img src="SMARTPREP LOGO 1.jpg (1).jpeg" alt="Logo" />
+      </div>
+
+      <h1>SmartPrepLearn</h1>
+      <p>Access your learning dashboard anytime, anywhere.</p>
+    </div>
+
+    <!-- RIGHT SIDE (form) -->
+    <div class="form-box">
+      <h2>Login</h2>
+      <p class="subtext">Welcome back, please enter your details</p>
+
+      <form id="loginForm">
+        <label>Email</label>
+        <input type="email" id="email" placeholder="Enter your email" required />
+
+        <label>Password</label>
+        <input type="password" id="password" placeholder="Enter your password" required />
+
+        <div class="options">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#">Forgot Password?</a>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <p class="switch">
+          Don't have an account? <a href="register.html">Register</a>
+        </p>
+      </form>
+    </div>
+
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

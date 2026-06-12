@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SmartPrepLearn - Registration</title>
+  <link rel="stylesheet" href="course.css"/>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- LEFT SIDE (Branding) -->
+    <div class="left-panel">
+      <div class="logo-box">
+        <!-- LOGO PLACEHOLDER -->
+        <div class="logo"><img src="SMARTPREP LOGO 1.jpg (1).jpeg" alt=""></div>
+      </div>
+
+      <h1 style="color: black;">SmartPrepLearn</h1>
+      <p style="color: black;">Register for courses and start learning with structured materials, quizzes, and progress tracking.</p>
+    </div>
+
+    <!-- RIGHT SIDE (FORM) -->
+    <div class="right-panel">
+
+      <form class="form" id="regForm">
+
+        <h2>Course Registration</h2>
+
+        <div class="grid">
+          <input type="text" placeholder="First Name" required />
+          <input type="text" placeholder="Last Name" required />
+        </div>
+
+        <input type="email" placeholder="Email Address" required />
+        <input type="tel" placeholder="Phone Number" required />
+
+        <select required>
+          <option value="">Select Course</option>
+          <option>Web Development</option>
+          <option>Data Science</option>
+          <option>UI/UX Design</option>
+          <option>Cybersecurity</option>
+        </select>
+
+        <input type="password" id="password" placeholder="Create Password" required />
+        <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+
+        <button type="submit">Register</button>
+
+        
+
+      </form>
+
+    </div>
+
+  </div>
+
+  <script src="register.js"></script>
+</body>
+</html>

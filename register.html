@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SmartPrepLearn - Register</title>
+<link rel="shortcut icon" href="SMARTPREP LOGO 1.jpg (1).jpeg" type="image/x-icon">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f7f9fc;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.container{
+width:100%;
+max-width:1300px;
+display:grid;
+grid-template-columns:45% 55%;
+background:#fff;
+border-radius:25px;
+overflow:hidden;
+box-shadow:0 20px 50px rgba(0,0,0,.12);
+}
+
+/* LEFT */
+
+.left{
+background:linear-gradient(
+135deg,
+#1565C0,
+#2196F3
+);
+padding:50px;
+color:white;
+position:relative;
+}
+
+.logo-container{
+display:flex;
+align-items:center;
+gap:12px;
+margin-bottom:50px;
+}
+
+.logo-container img{
+width:70px;
+height:70px;
+object-fit:contain;
+}
+
+.logo-container h2{
+font-size:28px;
+}
+
+.logo-container p{
+font-size:13px;
+opacity:.8;
+}
+
+.hero-title{
+font-size:55px;
+font-weight:700;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero-title span.green{
+color:#66BB00;
+}
+
+.hero-title span.yellow{
+color:#F4B400;
+}
+
+.hero-text{
+font-size:18px;
+line-height:1.7;
+max-width:500px;
+}
+
+.benefits{
+margin-top:50px;
+}
+
+.benefits li{
+list-style:none;
+margin-bottom:15px;
+font-size:16px;
+}
+
+/* RIGHT */
+
+.right{
+padding:50px;
+}
+
+.form-logo{
+text-align:center;
+margin-bottom:20px;
+}
+
+.form-logo img{
+width:90px;
+}
+
+.form-logo h2{
+margin-top:10px;
+color:#1565C0;
+}
+
+.form-title{
+text-align:center;
+margin-bottom:30px;
+}
+
+.form-title h1{
+color:#1f2937;
+font-size:32px;
+}
+
+.form-title p{
+color:#6b7280;
+}
+
+.form-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+}
+
+.input-group{
+margin-bottom:15px;
+}
+
+.input-group label{
+display:block;
+margin-bottom:8px;
+font-size:14px;
+font-weight:500;
+}
+
+.input-group input,
+.input-group select{
+width:100%;
+padding:14px;
+border:1px solid #d1d5db;
+border-radius:12px;
+font-size:15px;
+}
+
+.input-group input:focus,
+.input-group select:focus{
+outline:none;
+border-color:#1565C0;
+}
+
+.full{
+grid-column:span 2;
+}
+
+.checkbox{
+display:flex;
+align-items:center;
+gap:10px;
+margin:20px 0;
+font-size:14px;
+}
+
+.btn{
+width:100%;
+padding:16px;
+border:none;
+border-radius:12px;
+background:#1565C0;
+color:white;
+font-size:16px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+.btn:hover{
+background:#0d47a1;
+}
+
+.login-link{
+text-align:center;
+margin-top:20px;
+}
+
+.login-link a{
+color:#1565C0;
+text-decoration:none;
+font-weight:600;
+}
+
+/* PASSWORD BAR */
+
+.strength{
+height:8px;
+background:#ddd;
+margin-top:8px;
+border-radius:10px;
+overflow:hidden;
+}
+
+.strength-bar{
+height:100%;
+width:0%;
+transition:.3s;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1000px){
+
+.container{
+grid-template-columns:1fr;
+}
+
+.left{
+text-align:center;
+}
+
+.hero-title{
+font-size:42px;
+}
+
+.hero-text{
+margin:auto;
+}
+
+}
+
+@media(max-width:768px){
+
+.right{
+padding:30px;
+}
+
+.left{
+padding:30px;
+}
+
+.form-grid{
+grid-template-columns:1fr;
+}
+
+.full{
+grid-column:span 1;
+}
+
+.hero-title{
+font-size:35px;
+}
+
+.logo-container{
+justify-content:center;
+}
+
+}
+
+@media(max-width:480px){
+
+.hero-title{
+font-size:28px;
+}
+
+.form-title h1{
+font-size:25px;
+}
+
+.logo-container img{
+width:55px;
+}
+
+.logo-container h2{
+font-size:22px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<!-- LEFT SIDE -->
+
+<div class="left">
+
+<div class="logo-container">
+<img src="SMARTPREP LOGO 1.jpg (1).jpeg" alt="logo">
+<div>
+<h2>SmartPrepLearn</h2>
+<p>Learn Today, Lead Tomorrow</p>
+</div>
+</div>
+
+<h1 class="hero-title">
+Start Your
+<span class="yellow">Learning</span>
+Journey
+<span class="green">Today!</span>
+</h1>
+
+<p class="hero-text">
+Create your account and unlock a world of knowledge,
+skills and opportunities.
+</p>
+
+<ul class="benefits">
+<li>✅ High Quality Courses</li>
+<li>✅ Learn At Your Own Pace</li>
+<li>✅ Track Your Progress</li>
+<li>✅ Earn Recognized Certificates</li>
+</ul>
+
+</div>
+
+<!-- RIGHT SIDE -->
+
+<div class="right">
+
+<div class="form-logo">
+<img src="images/logo.png" alt="">
+<h2>SmartPrepLearn</h2>
+</div>
+
+<div class="form-title">
+<h1>Create Account</h1>
+<p>Fill in the details below to get started</p>
+</div>
+
+<form id="registerForm">
+
+<div class="form-grid">
+
+<div class="input-group">
+<label>Full Name</label>
+<input type="text" id="fullName" required>
+</div>
+
+<div class="input-group">
+<label>Username</label>
+<input type="text" id="username" required>
+</div>
+
+<div class="input-group">
+<label>Email Address</label>
+<input type="email" id="email" required>
+</div>
+
+<div class="input-group">
+<label>Phone Number</label>
+<input type="tel" id="phone" required>
+</div>
+
+<div class="input-group full">
+<label>Country</label>
+<select id="country" required>
+<option>Select Country</option>
+<option>Nigeria</option>
+<option>Ghana</option>
+<option>Kenya</option>
+<option>South Africa</option>
+<option>United States of America</option>
+<option>United Kingdom</option>
+<option>Tanzania</option>
+<option>Morroco</option>
+<option>Canada</option>
+<option>Switzerland</option>
+<option>Saudi Arabia</option>
+<option>Mexico</option>
+<option>Brazil</option>
+<option>Niger</option>
+<option>United Arab Emirates</option>
+<option>Egypt</option>
+<option>Isreal</option>
+</select>
+</div>
+
+<div class="input-group full">
+<label>Password</label>
+<input type="password" id="password" required>
+
+<div class="strength">
+<div class="strength-bar" id="strengthBar"></div>
+</div>
+
+</div>
+
+<div class="input-group full">
+<label>Confirm Password</label>
+<input type="password" id="confirmPassword">
+</div>
+
+</div>
+
+<div class="checkbox">
+<input type="checkbox" id="terms" required>
+<span>I agree to the Terms & Conditions</span>
+</div>
+
+<button type="submit" class="btn">
+Create Account
+</button>
+
+</form>
+
+<div class="login-link">
+Already have an account?
+<a href="login.html">Login Here</a>
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+    const password =
+    document.getElementById("password");
+    
+    const strengthBar =
+    document.getElementById("strengthBar");
+    
+    password.addEventListener("input",()=>{
+    
+    let val=password.value;
+    let score=0;
+    
+    if(val.length>=8) score+=25;
+    if(/[A-Z]/.test(val)) score+=25;
+    if(/[0-9]/.test(val)) score+=25;
+    if(/[^A-Za-z0-9]/.test(val)) score+=25;
+    
+    strengthBar.style.width=score+"%";
+    
+    if(score<=25){
+    strengthBar.style.background="#EF5350";
+    }
+    else if(score<=50){
+    strengthBar.style.background="#F4B400";
+    }
+    else if(score<=75){
+    strengthBar.style.background="#66BB00";
+    }
+    else{
+    strengthBar.style.background="#1565C0";
+    }
+    
+    });
+    
+    const registerForm =
+    document.getElementById("registerForm");
+    
+    registerForm.addEventListener("submit", function(e){
+    
+    e.preventDefault();
+    
+    const password =
+    document.getElementById("password").value;
+    
+    const confirmPassword =
+    document.getElementById("confirmPassword").value;
+    
+    if(password !== confirmPassword){
+    
+    alert("Passwords do not match!");
+    return;
+    
+    }
+    
+    alert(
+    "Registration Successful! Redirecting to Course Registration..."
+    );
+    
+    setTimeout(() => {
+    
+    window.location.href =
+    "course-registration.html";
+    
+    },1500);
+    
+    });
+    
+    </script>
+</body>
+</html>
