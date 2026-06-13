@@ -23,5 +23,5 @@ loginForm.addEventListener("submit", function(e) {
     // Validate user here
 
     // Redirect to Course Registration Page
-    window.location.href = "course.html";
+    window.location.href = "course-registration.html";
 });

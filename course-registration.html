@@ -1,63 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SmartPrepLearn - Registration</title>
-  <link rel="stylesheet" href="course.css"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Courses | SmartPrepLearn</title>
+
+<style>
+body{
+font-family:Poppins, sans-serif;
+margin:0;
+background:#f5f9ff;
+}
+
+header{
+background:#0A2540;
+color:white;
+padding:20px;
+text-align:center;
+}
+
+.container{
+padding:40px 8%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+text-align:center;
+}
+
+.card h3{
+color:#0A2540;
+}
+
+button{
+margin-top:10px;
+padding:10px 15px;
+border:none;
+background:#06b6d4;
+color:white;
+border-radius:20px;
+cursor:pointer;
+}
+</style>
+
 </head>
 
 <body>
 
-  <div class="container">
+<header>
+<h2>Available Courses</h2>
+</header>
 
-    <!-- LEFT SIDE (Branding) -->
-    <div class="left-panel">
-      <div class="logo-box">
-        <!-- LOGO PLACEHOLDER -->
-        <div class="logo"><img src="SMARTPREP LOGO 1.jpg (1).jpeg" alt=""></div>
-      </div>
+<div class="container">
 
-      <h1 style="color: black;">SmartPrepLearn</h1>
-      <p style="color: black;">Register for courses and start learning with structured materials, quizzes, and progress tracking.</p>
-    </div>
+<div class="card">
+<h3>Web Development</h3>
+<p>Frontend & Backend Development</p>
+<button onclick="selectCourse('Web Development', 5000)">Enroll</button>
+</div>
 
-    <!-- RIGHT SIDE (FORM) -->
-    <div class="right-panel">
+<div class="card">
+<h3>Graphic Design</h3>
+<p>Design professional graphics</p>
+<button onclick="selectCourse('Graphic Design', 4000)">Enroll</button>
+</div>
 
-      <form class="form" id="regForm">
+<div class="card">
+<h3>UI/UX Design</h3>
+<p>Design user experiences</p>
+<button onclick="selectCourse('UI/UX Design', 4500)">Enroll</button>
+</div>
 
-        <h2>Course Registration</h2>
+<div class="card">
+<h3>Digital Marketing</h3>
+<p>Grow businesses online</p>
+<button onclick="selectCourse('Digital Marketing', 3000)">Enroll</button>
+</div>
 
-        <div class="grid">
-          <input type="text" placeholder="First Name" required />
-          <input type="text" placeholder="Last Name" required />
-        </div>
+<div class="card">
+<h3>Data Analysis</h3>
+<p>Work with data & insights</p>
+<button onclick="selectCourse('Data Analysis', 6000)">Enroll</button>
+</div>
 
-        <input type="email" placeholder="Email Address" required />
-        <input type="tel" placeholder="Phone Number" required />
+<div class="card">
+<h3>Cybersecurity</h3>
+<p>Protect systems & networks</p>
+<button onclick="selectCourse('Cybersecurity', 7000)">Enroll</button>
+</div>
 
-        <select required>
-          <option value="">Select Course</option>
-          <option>Web Development</option>
-          <option>Data Science</option>
-          <option>UI/UX Design</option>
-          <option>Cybersecurity</option>
-        </select>
+<div class="card">
+<h3>Mobile App Development</h3>
+<p>Build Android & iOS apps</p>
+<button onclick="selectCourse('Mobile App Development', 8000)">Enroll</button>
+</div>
 
-        <input type="password" id="password" placeholder="Create Password" required />
-        <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+</div>
 
-        <button type="submit">Register</button>
+<script>
+function selectCourse(name, price){
 
-        
+localStorage.setItem("selectedCourse", JSON.stringify({
+courseName: name,
+coursePrice: price
+}));
 
-      </form>
+window.location.href = "payment.html";
+}
+</script>
 
-    </div>
-
-  </div>
-
-  <script src="register.js"></script>
 </body>
 </html>

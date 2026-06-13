@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment | SmartPrepLearn</title>
+
+<style>
+body{
+font-family:Arial, sans-serif;
+background:#f5f9ff;
+margin:0;
+padding:0;
+}
+
+.container{
+max-width:600px;
+margin:100px auto;
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+
+h2{
+text-align:center;
+color:#0A2540;
+}
+
+.course-box{
+border:1px solid #ddd;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
+}
+
+.price{
+font-size:20px;
+font-weight:bold;
+color:#06b6d4;
+margin-top:10px;
+}
+
+button{
+width:100%;
+margin-top:20px;
+padding:15px;
+border:none;
+background:#06b6d4;
+color:white;
+font-size:16px;
+border-radius:10px;
+cursor:pointer;
+}
+
+button:hover{
+background:#0891b2;
+}
+
+.empty{
+text-align:center;
+color:red;
+margin-top:20px;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h2>Course Payment</h2>
+
+<div id="courseDisplay"></div>
+
+</div>
+
+<script>
+
+// GET SELECTED COURSE
+let course = JSON.parse(localStorage.getItem("selectedCourse"));
+
+let display = document.getElementById("courseDisplay");
+
+if(course){
+
+display.innerHTML = `
+<div class="course-box">
+<h3>${course.courseName}</h3>
+<div class="price">₦${course.coursePrice}</div>
+
+<button onclick="payNow()">
+Pay Now
+</button>
+</div>
+`;
+
+} else {
+display.innerHTML = `<p class="empty">No course selected. Go back and choose a course.</p>`;
+}
+
+// FAKE PAYMENT BUTTON (we will upgrade later)
+function payNow(){
+alert("Payment successful for " + course.courseName);
+
+// after payment redirect (you can change later)
+localStorage.setItem("paidCourse", JSON.stringify(course));
+
+window.location.href = "dashboard.html";
+}
+
+</script>
+
+</body>
+</html>
