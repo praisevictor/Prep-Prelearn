@@ -110,8 +110,29 @@ cursor:pointer;
 </div>
 
 </div>
-
 <script>
+
+function selectCourse(name, price){
+
+const selectedCourse = {
+    courseName: name,
+    coursePrice: price,
+    paymentStatus: "pending"
+};
+
+localStorage.setItem(
+    "selectedCourse",
+    JSON.stringify(selectedCourse)
+);
+
+window.location.href = "payment.html";
+
+}
+
+</script>
+
+<!-- <script>
+    
 function selectCourse(name, price){
 
 localStorage.setItem("selectedCourse", JSON.stringify({
@@ -121,7 +142,8 @@ coursePrice: price
 
 window.location.href = "payment.html";
 }
-</script>
+
+</script> -->
 
 </body>
 </html>

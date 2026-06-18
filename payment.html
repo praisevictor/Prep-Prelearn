@@ -21,6 +21,19 @@ padding:25px;
 border-radius:15px;
 box-shadow:0 5px 20px rgba(0,0,0,0.1);
 }
+.course-box h4{
+    margin-top:20px;
+    color:#0A2540;
+}
+.course-box p{
+    margin:10px 0;
+}
+.course-box{
+border:1px solid #ddd;
+padding:20px;
+border-radius:10px;
+margin-top:20px;
+}
 
 h2{
 text-align:center;
@@ -79,35 +92,57 @@ margin-top:20px;
 <script>
 
 // GET SELECTED COURSE
-let course = JSON.parse(localStorage.getItem("selectedCourse"));
+const course = JSON.parse(localStorage.getItem("selectedCourse"));
 
-let display = document.getElementById("courseDisplay");
+const display = document.getElementById("courseDisplay");
 
 if(course){
 
 display.innerHTML = `
 <div class="course-box">
-<h3>${course.courseName}</h3>
-<div class="price">₦${course.coursePrice}</div>
+
+<h3 id="courseName">${course.courseName}</h3>
+
+<p class="price" id="coursePrice">
+₦${course.coursePrice.toLocaleString()}
+</p>
+
+<hr>
+
+<h4>Payment Details</h4>
+
+<p><strong>Bank Name:</strong> Opay</p>
+
+<p><strong>Account Name:</strong> SmartPrepLearn Academy</p>
+
+<p><strong>Account Number:</strong> 8134567890</p>
 
 <button onclick="payNow()">
-Pay Now
+I Have Paid
 </button>
+
 </div>
 `;
 
-} else {
-display.innerHTML = `<p class="empty">No course selected. Go back and choose a course.</p>`;
+}else{
+
+display.innerHTML =
+`<p class="empty">
+No course selected. Go back and choose a course.
+</p>`;
+
 }
 
-// FAKE PAYMENT BUTTON (we will upgrade later)
+// PAYMENT BUTTON
 function payNow(){
-alert("Payment successful for " + course.courseName);
 
-// after payment redirect (you can change later)
-localStorage.setItem("paidCourse", JSON.stringify(course));
+localStorage.setItem(
+    "paidCourse",
+    JSON.stringify(course)
+);
 
 window.location.href = "paymentcheck.html";
+
 }
 
 </script>
